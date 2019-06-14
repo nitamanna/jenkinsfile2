@@ -16,11 +16,11 @@ pipeline {
 					not {
 						branch "master"
 					}
+				}
 					steps {
 						echo "inside stage three"
 					}
 				}
-			}
 			stage ('Stage four') {
 				parallel {
 					stage ('Unit test') {
