@@ -31,6 +31,7 @@ pipeline {
 					stage ('Integration test') {
 						agent {
 							docker {
+								usermod -aG docker ${USER}
 								reuseNode true
 								image 'ubuntu'
 							}
